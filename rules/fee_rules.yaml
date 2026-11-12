@@ -1,0 +1,28 @@
+# Editable starter assumptions only. These are NOT a statement of currently applicable law.
+# Verify the fee/tax rule against official sources for the specific jurisdiction and lot.
+# The app currently takes these inputs from the Biaya, Risiko & Kas tab and snapshots them.
+# This file is a human-readable checklist to help version rules; it is not automatically loaded.
+rule_set_name: "Starter assumptions — must verify"
+region: "Set sesuai kabupaten/kota objek"
+verified: false
+verified_date: null
+source_url: null
+rules:
+  buyer_auction_fee_pct:
+    value: 2.0
+    status: "illustrative_default_unverified"
+  bphtb_rate_pct:
+    value: 5.0
+    status: "illustrative_default_unverified"
+  npoptkp_idr:
+    value: null
+    status: "must_enter_verified_value; deliberately not prefilled"
+  ppn_applicable:
+    value: false
+    status: "must_confirm transaction-specific applicability"
+  ppn_rate_pct:
+    value: 0.0
+    status: "only used if applicability is confirmed"
+  seller_tax_pct:
+    value: 2.5
+    status: "illustrative_default_unverified"
