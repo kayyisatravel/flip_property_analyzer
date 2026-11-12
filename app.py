@@ -20,7 +20,7 @@ from reports.report_builder import build_markdown_report, idr
 from services.document_parser import extract_text
 from storage.repository import is_configured, list_snapshots, save_snapshot
 
-st.set_page_config(page_title="Auction Flip Analyzer", page_icon="🏠", layout="wide")
+st.set_page_config(page_title="Kayna Flip Analyzer", page_icon="🏠", layout="wide")
 
 # Lightweight, optional single-user gate. Set APP_PASSWORD in Streamlit Secrets before deployment.
 def secret_value(key: str, default: str = "") -> str:
@@ -36,7 +36,7 @@ def secret_value(key: str, default: str = "") -> str:
 APP_PASSWORD = secret_value("APP_PASSWORD", "")
 if APP_PASSWORD:
     if not st.session_state.get("authenticated", False):
-        st.title("Auction Flip Analyzer")
+        st.title("Property Flip Analyzer")
         st.caption("Akses terbatas")
         with st.form("login_form"):
             password = st.text_input("Kata sandi aplikasi", type="password")
