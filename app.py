@@ -70,7 +70,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.title("Auction Flip Analyzer")
+st.title("Kayna Property Flip Analyzer")
 st.caption("Investment Decision System untuk rumah lelang · Sell first, buy second · mesin hitung deterministik + AI opsional")
 
 # -------- Session state --------
