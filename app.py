@@ -52,7 +52,7 @@ else:
     st.sidebar.warning("APP_PASSWORD belum diatur. Siapa pun yang memiliki URL aplikasi dapat membukanya.")
 
 GEMINI_API_KEY = secret_value("GEMINI_API_KEY", "")
-GEMINI_MODEL = secret_value("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = secret_value("GEMINI_MODEL", "gemini-3.5-flash-lite")
 SUPABASE_URL = secret_value("SUPABASE_URL", "")
 SUPABASE_SERVICE_ROLE_KEY = secret_value("SUPABASE_SERVICE_ROLE_KEY", "")
 
