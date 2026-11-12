@@ -138,6 +138,7 @@ with tab_property:
     with c2:
         bedrooms = st.number_input("Kamar tidur", min_value=0, max_value=30, value=0, step=1, key="bedrooms")
         bathrooms = st.number_input("Kamar mandi", min_value=0, max_value=30, value=0, step=1, key="bathrooms")
+        power_va = st.selectbox("Daya listrik (VA)", [0, 450, 900, 1300, 2200, 3500, 4400, 5500, 6600, 7700, 11000], key="power_va")
         property_type = st.selectbox("Tipe/karakter rumah", ["Tidak diketahui", "Rumah 1 lantai", "Rumah 2 lantai", "Rumah kecil/standar", "Rumah besar", "Cluster/modern"], key="property_type")
     with c3:
         legal_status = st.selectbox("Status verifikasi legalitas", ["Belum terverifikasi", "Informasi sumber", "Informasi lapangan", "Terverifikasi", "Bertentangan"], key="legal_status")
@@ -377,39 +378,39 @@ scenario_map = {
 }
 selected_possession = scenario_map[possession_scenario_name]
 
-property_data = {
-    "name": property_name,
-    "complex": complex_name,
-    "address": address,
-    "auction_url": auction_url,
-    "lot_code": lot_code,
-    "auction_source": auction_source,
-    "auction_date": auction_date.isoformat() if isinstance(auction_date, date) else None,
-    "bank_seller": bank_seller,
-    "auction_limit": float(auction_limit),
-    "deposit_amount": float(deposit_amount),
-    "bid_increment": float(auction_increment),
-    "njop": float(njop),
-    "certificate": certificate,
-    "land_area": float(land_area),
-    "building_area": float(building_area),
-    "bedrooms": int(bedrooms),
-    "bathrooms": int(bathrooms),
-    "power_va": int(power_va),
-    "property_type": property_type,
-    "condition": subject_condition,
-    "exterior_inspected": bool(exterior_inspected),
-    "interior_inspected": bool(interior_inspected),
-    "access_type": access_type,
-    "flood_history": flood_history,
-    "physical_notes": physical_notes,
-    "legal_status": legal_status,
-    "identity_verified": bool(identity_verified),
-    "title_match": bool(title_match),
-    "occupancy_status": occupancy_status,
-    "occupancy_verified": bool(occupancy_verified),
-    "dispute_detected": bool(dispute_detected),
-}
+    property_data = {
+        "name": property_name,
+        "complex": complex_name,
+        "address": address,
+        "auction_url": auction_url,
+        "lot_code": lot_code,
+        "auction_source": auction_source,
+        "auction_date": auction_date.isoformat() if isinstance(auction_date, date) else None,
+        "bank_seller": bank_seller,
+        "auction_limit": float(auction_limit),
+        "deposit_amount": float(deposit_amount),
+        "bid_increment": float(auction_increment),
+        "njop": float(njop),
+        "certificate": certificate,
+        "land_area": float(land_area),
+        "building_area": float(building_area),
+        "bedrooms": int(bedrooms),
+        "bathrooms": int(bathrooms),
+        "power_va": int(power_va),
+        "property_type": property_type,
+        "condition": subject_condition,
+        "exterior_inspected": bool(exterior_inspected),
+        "interior_inspected": bool(interior_inspected),
+        "access_type": access_type,
+        "flood_history": flood_history,
+        "physical_notes": physical_notes,
+        "legal_status": legal_status,
+        "identity_verified": bool(identity_verified),
+        "title_match": bool(title_match),
+        "occupancy_status": occupancy_status,
+        "occupancy_verified": bool(occupancy_verified),
+        "dispute_detected": bool(dispute_detected),
+    }
 fees_data = {
     "buyer_auction_fee_pct": buyer_auction_fee_pct,
     "bphtb_rate_pct": bphtb_rate_pct,
