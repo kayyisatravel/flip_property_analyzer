@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Secrets — never commit these
+.streamlit/secrets.toml
+
+# Local app exports / data
+*.sqlite3
+local_data/
+exports/
+.DS_Store
+Thumbs.db
